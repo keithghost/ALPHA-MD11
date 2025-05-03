@@ -1,0 +1,72 @@
+{
+  "name": "ALPHA-MD",
+  "description": "Alpha is a multidevice WhatsApp bot built to make your WhatsApp enjoyable.",
+  "keywords": [
+    "bot",
+    "node",
+    "baileys",
+    "whatsapp"
+  ],
+  "logo": "https://telegra.ph/file/b148f6ed21fa02ac5325b.jpg",
+  "repository": "https://github.com/Keithkeizzah/ALPHA-MD",
+  "success_url": "/",
+  "stack": "container",
+  "env": {
+    "PREFIX": {
+      "description": "Choose your bot's prefix",
+      "value": ".",
+      "required": true
+    },
+    "ANTICALL_MSG": {
+      "description": "Type your anticall message to always send when calls are declined. You can leave it blank",
+      "value": "This is Keith personal assistant kindly leave a message",
+      "required": false
+    },
+    "BOT_NAME": {
+      "description": "You must give a name for your bot",
+      "value": "",
+      "required": false
+    },
+    "TIMEZONE": {
+      "description": "Set your bot timezone",
+      "value": "Africa/Nairobi",
+      "required": false
+    },
+    "PUBLIC_MODE": {
+      "description": "Set 'yes' to make your bot public or 'no' to keep it private",
+      "value": "yes",
+      "required": false
+    },
+    "SESSION_ID": {
+      "description": "Enter your session ID, the code you receive after scanning the QR code",
+      "value": "",
+      "required": true
+    },
+    "OWNER_NAME": {
+      "description": "Insert your name here",
+      "value": "",
+      "required": false
+    },
+    "URL": {
+      "description": "You must add your bot image URL",
+      "value": "",
+      "required": true
+    },
+    "NUMERO_OWNER": {
+      "description": "Your phone number (exclude '+' and area code, e.g., '254796299159')",
+      "value": "254796299159",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-2x"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0"
+    }
+  ]
+}
